@@ -8,7 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Seja bem vindo ao Nosso Sistema</h1>
+    <h1>Seja bem vindo Ao  Sistema </h1>
 
+
+    <p>Agora são: {{ now }}</p>
+
+    <ul>
+    {% for Transacao in Transacoes %}
+
+        {% if transacao == "t1" %}
+            <li><b>{{ Transacao }}</b></li>
+        {% else %}
+            <li>{{ Transacao }}</li>
+        {% endif %}
+
+    {% endfor %}
+    </ul>
 </body>
 </html>

@@ -1,10 +1,17 @@
 from django.shortcuts import render
-
+from .models import Transacao
 from django.http import HttpResponse
 import  datetime
 
 def home(request):
-    now = datetime.datetime.now()
-   # html ="<html><body>It is Now %s.</body></html>"% now
-    return render(request,'contas/home.html')
+    data = {}
+    data['now']= datetime.datetime.now()
+    data['Transacoes']=['t1','t2','t3']
 
+   # html ="<html><body>It is Now %s.</body></html>"% now
+    return render(request,'contas/home.html',data)
+
+def listagem(request):
+    data ={}
+    data['Transacoes']= Transacao.objects.all()
+    return render(request,'contas/listagem.html',data)

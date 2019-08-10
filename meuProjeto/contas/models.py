@@ -15,7 +15,7 @@ class Transacao(models.Model):
     observacoes=models.TextField(null=True , blank= True)
 
     class Meta:
-     verbose_name_plural= 'Tensações'
+     verbose_name_plural= 'Transações'
 
     def __str__(self):
         return self.descricao
