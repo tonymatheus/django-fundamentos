@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Transacao
 from django.http import HttpResponse
-import  datetime
+from .models import Transacao
+import datetime
 
 def home(request):
     data = {}
@@ -11,7 +11,8 @@ def home(request):
    # html ="<html><body>It is Now %s.</body></html>"% now
     return render(request,'contas/home.html',data)
 
+
 def listagem(request):
-    data ={}
-    data['Transacoes']= Transacao.objects.all()
-    return render(request,'contas/listagem.html',data)
+    data = {}
+    data['Transacoes'] = Transacao.objects.all()
+    return render(request, 'contas/listagem.html', data)
