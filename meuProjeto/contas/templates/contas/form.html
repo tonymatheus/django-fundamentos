@@ -5,15 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listagem</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Listagem</h1>
-    <ul>
-    {% for Transacao  in Transacoes %}
-        <li>{{ Transacao.descricao}} = {{ Transacao.data }} = {{ Transacao.valor}} = {{ Transacao.categoria}} </li>
-    {% endfor%}
-    </ul>
-    <a href="{% url 'url_nova' %}"> Novo </a>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button type="submit"> Salvar</button>
+
+
+        </form>
 </body>
 </html>
