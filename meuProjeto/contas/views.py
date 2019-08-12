@@ -12,7 +12,7 @@ def home(request):
     return render(request,'contas/home.html',data)
 
 
-def listagem(request):
+def listagem (request):
     data = {}
-    data['Transacoes'] = Transacao.objects.all()
-    return render(request, 'contas/listagem.html', data)
+    data ['Transacoes'] = Transacao.objects.all()
+    return render(request,'contas/listagem.html',data)

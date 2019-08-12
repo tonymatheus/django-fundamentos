@@ -9,8 +9,10 @@
 </head>
 <body>
     <h1>Listagem</h1>
-    {% for Transacao in  Transacoes %}
-         {{Trasacao}}
-    {% endfor %}
+    <ul>
+    {% for Transacao  in Transacoes %}
+        <li>{{ Transacao.descricao}} = {{ Transacao.data }} = {{ Transacao.valor}} = {{ Transacao.categoria}} </li>
+    {% endfor%}
+    </ul>
 </body>
 </html>
