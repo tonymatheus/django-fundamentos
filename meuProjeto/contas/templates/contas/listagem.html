@@ -11,7 +11,7 @@
     <h1>Listagem</h1>
     <ul>
     {% for Transacao  in Transacoes %}
-        <li>{{ Transacao.descricao}} = {{ Transacao.data }} = {{ Transacao.valor}} = {{ Transacao.categoria}} </li>
+        <li> <a href=" {% url 'url_update' Transacao.id%} ">{{ Transacao.descricao}} = {{ Transacao.data }} = {{ Transacao.valor}} = {{ Transacao.categoria}} </a> </li>
     {% endfor%}
     </ul>
     <a href="{% url 'url_nova' %}"> Novo </a>
